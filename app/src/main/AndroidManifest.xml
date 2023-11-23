@@ -37,16 +37,10 @@
             android:name=".fragment.ThanhVienFragment"
             android:exported="false" />
         <activity
-            android:name=".fragment.ThongBaoFragment"
-            android:exported="false" />
-        <activity
             android:name=".fragment.YeuThichFragment"
             android:exported="false" />
         <activity
             android:name=".fragment.DanhMucFragment"
-            android:exported="false" />
-        <activity
-            android:name=".fragment.HomeFragment"
             android:exported="false" />
         <activity
             android:name=".DangNhapActivity"
