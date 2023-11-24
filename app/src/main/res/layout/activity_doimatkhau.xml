@@ -38,7 +38,7 @@
                 android:layout_height="50dp"
                 android:id="@+id/Doitentk"
                 android:background="@drawable/custom_edittext"
-                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawableLeft="@drawable/ic_canhan"
                 android:drawablePadding="8dp"
                 android:hint="Nhập tên "
                 android:padding="8dp"

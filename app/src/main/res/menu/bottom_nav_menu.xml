@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:title="Home"
         android:id="@+id/nvhome"
-        android:icon="@drawable/ic_baseline_home_24"/>
+        android:icon="@drawable/trangchu"/>
 
     <item android:title="Danh mục"
         android:id="@+id/nvdanhmuc"
-        android:icon="@drawable/ic_danhmuc"/>
+        android:icon="@drawable/ic_timkiem"/>
 
     <item android:title="Yêu thích"
         android:id="@+id/nvyeuthich"
@@ -14,6 +14,6 @@
 
     <item android:title="Thành viên"
         android:id="@+id/nvthanhvien"
-        android:icon="@drawable/ic_baseline_person_24"/>
+        android:icon="@drawable/ic_canhan"/>
 
 </menu>
