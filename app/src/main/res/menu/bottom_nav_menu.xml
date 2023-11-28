@@ -6,7 +6,7 @@
 
     <item android:title="Danh mục"
         android:id="@+id/nvdanhmuc"
-        android:icon="@drawable/ic_"/>
+        android:icon="@drawable/ic_danhmuc"/>
 
     <item android:title="Yêu thích"
         android:id="@+id/nvyeuthich"
