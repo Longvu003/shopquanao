@@ -42,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new TrangchuFragment();
                 } else if (item.getItemId() == R.id.nvdanhmuc) {
                     fragment = new DanhmucFragment();
+                } else if (item.getItemId() == R.id.nvyeuthich) {
+                    fragment = new YeuthichFragment();
+                } else if (item.getItemId() == R.id.nvthanhvien) {
+                    fragment = new CanhanFragment();
                 }
 
                 getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_container, fragment).commit();
