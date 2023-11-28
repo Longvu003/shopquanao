@@ -6,6 +6,9 @@ android {
     namespace = "com.example.duan1"
     compileSdk = 34
 
+    buildFeatures{
+        viewBinding = true
+    }
     defaultConfig {
         applicationId = "com.example.duan1"
         minSdk = 28
