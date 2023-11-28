@@ -36,7 +36,7 @@
                 android:gravity="end"
                 android:layout_marginRight="7dp"
                 android:textSize="12sp"
-                android:textColor="#27D800"/>
+                android:textColor="#0E9A3D"/>
 
         </LinearLayout>
 
@@ -70,7 +70,7 @@
                 android:gravity="end"
                 android:layout_marginRight="7dp"
                 android:textSize="12sp"
-                android:textColor="#27D800"/>
+                android:textColor="#0E9A3D"/>
 
         </LinearLayout>
 
@@ -104,7 +104,7 @@
                 android:gravity="end"
                 android:layout_marginRight="7dp"
                 android:textSize="12sp"
-                android:textColor="#27D800"/>
+                android:textColor="#0E9A3D"/>
 
         </LinearLayout>
 
