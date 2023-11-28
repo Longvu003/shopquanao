@@ -10,15 +10,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:drawableLeft="@drawable/ic_search"
-            android:background="@drawable/custom_searchbar"
-            android:padding="13dp"
-            android:hint="Tìm Kiếm"
-            android:drawablePadding="5dp"/>
+
 
         <LinearLayout
             android:layout_width="match_parent"
