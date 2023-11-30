@@ -35,7 +35,7 @@
                     app:srcCompat="@drawable/ao" />
 
                 <TextView
-                    android:id="@+id/label"
+                    android:id="@+id/tvTensp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/image"
@@ -48,10 +48,10 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/price"
+                    android:id="@+id/tvGiasp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/label"
+                    android:layout_below="@id/tvTensp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="5dp"
