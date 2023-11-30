@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="product_details"
+                android:text="Ten San Pham"
                 android:textColor="#000000"
                 android:textSize="24sp"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -58,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:text="description here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\n"
+                android:text="Thong Tin San Pham"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/thePriceOfProduct" />
 
@@ -68,10 +68,10 @@
 
     <Button
         android:id="@+id/addToCartButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:layout_margin="16dp"
-        android:background="@drawable/custom_green"
+        android:backgroundTint="#FF006400"
         android:text="Add to cart"
         android:textColor="#FFF"
         app:layout_constraintBottom_toBottomOf="parent"
