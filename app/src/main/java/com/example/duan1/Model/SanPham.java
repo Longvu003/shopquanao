@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 
 import java.io.Serializable;
 
-@SuppressLint("ParcelCreator")
+
 public class SanPham implements Serializable {
     private  String masp;
     private  String tensp;

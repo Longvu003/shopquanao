@@ -46,7 +46,6 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.viewhold
     private TextView txtmasp;
     private TextView txttensp;
     private TextView txtgiasp;
-    private TextView txthinhanhsp;
     private OnItemClickListener mListener;
 
 
@@ -56,7 +55,7 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.viewhold
             txtmasp = itemView.findViewById(R.id.txtmasp);
             txttensp = itemView.findViewById(R.id.txttensp);
             txtgiasp = itemView.findViewById(R.id.txtgiasp);
-            txthinhanhsp = itemView.findViewById(R.id.txthinhanhsp);
+
         }
     }
 
@@ -74,14 +73,17 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.viewhold
         txtmasp.setText(String.valueOf(sanpham.getMasp()));
         txttensp.setText(sanpham.getTensp());
         txtgiasp.setText(String.valueOf(sanpham.getGiasp()));
-        txthinhanhsp.setText(sanpham.getHinhanhsp());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(context, ThongTinSanPhamActivity.class);
                 intent.putExtra("sanpham",list.get(position));
                 context.startActivity(intent);
-
+                Bundle extra=intent.getExtras();
+           if(extra!=null){
+               String data=extra.getString("sanpham");
+           }
             }
         });
     }

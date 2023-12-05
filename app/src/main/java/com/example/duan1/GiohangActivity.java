@@ -18,9 +18,6 @@ import java.util.ArrayList;
 public class GiohangActivity extends AppCompatActivity {
 
 Context context;
-private ArrayList<SanPham> gioHang;
-private SanPhamAdapter giohangAdapter;
-private RecyclerView recyclerView_giohang;
     private  String total="0";
     SanPham sanPham;
     ActivityGiohangBinding binding;
@@ -42,6 +39,7 @@ private RecyclerView recyclerView_giohang;
 //            total+=giasp;
 //            Log.d("IntentData", "masp: " + masp + ", tensp: " + tensp + ", giasp: " + giasp + ", hinhanhsp: " + hinhanhsp);
 //        }
+
 
     }
 
