@@ -73,7 +73,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
-<<<<<<< Updated upstream
         android:text="Quên Mật Khẩu?"
         android:textSize="14sp"
         android:textAlignment="center"
@@ -83,10 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:text="Chưa Có Tài Khoản? Đăng Kí Ngay"
-=======
         android:text="Forgot your password?"
->>>>>>> Stashed changes
         android:textSize="14sp"
         android:textAlignment="center"
         android:id="@+id/forgotText"
