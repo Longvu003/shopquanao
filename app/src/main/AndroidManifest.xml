@@ -7,11 +7,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-<<<<<<< Updated upstream
-        android:label="Abiter"
-=======
         android:label="Arbiter"
->>>>>>> Stashed changes
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Duan1"
@@ -29,18 +25,6 @@
             android:name=".GiohangActivity"
             android:exported="false" />
         <activity
-<<<<<<< Updated upstream
-=======
-            android:name=".fragment.ThanhVienFragment"
-            android:exported="false" />
-        <activity
-            android:name=".fragment.YeuThichFragment"
-            android:exported="false" />
-        <activity
-            android:name=".fragment.DanhMucFragment"
-            android:exported="false" />
-        <activity
->>>>>>> Stashed changes
             android:name=".DangNhapActivity"
             android:exported="false" />
         <activity
@@ -51,7 +35,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
