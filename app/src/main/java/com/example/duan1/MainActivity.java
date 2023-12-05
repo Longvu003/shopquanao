@@ -9,8 +9,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.duan1.Adapter.SanPhamAdapter;
@@ -32,15 +35,19 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
 //    RecyclerView recyclerView;
 //    Context context = this;
-
-
-
+ImageView image_cart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        image_cart=findViewById(R.id.image_cart);
+        image_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, GiohangActivity.class));
+            }
+        });
 
 
         getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_container, new TrangchuFragment()).commit();

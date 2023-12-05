@@ -14,6 +14,9 @@ public interface APIService {
 
    @GET("sanpham.php")
     Call<ArrayList<SanPham>> getlistsanpham();
-
+    @GET("sanphamnam.php")
+    Call<ArrayList<SanPham>> getlistsanphamnam();
+    @GET("phukien.php")
+    Call<ArrayList<SanPham>> getlistphukien();
 
 }

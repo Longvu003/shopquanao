@@ -46,13 +46,9 @@ public class DanhmucFragment extends Fragment {
             public void onResponse(Call<ArrayList<SanPham>> call, Response<ArrayList<SanPham>> response) {
                 list = response.body();
                 sanPhamAdapter = new SanPhamAdapter(getActivity(), list);
-                binding.rcvPK.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
-                binding.rcvTTnam.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
                 binding.rcvTTnu.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
                 binding.rcvTTnu.setAdapter(sanPhamAdapter);
-                binding.rcvTTnam.setAdapter(sanPhamAdapter);
-                binding.rcvPK.setAdapter(sanPhamAdapter);
-                Toast.makeText(getActivity(), "Thành công", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -60,8 +56,34 @@ public class DanhmucFragment extends Fragment {
                 Toast.makeText(getActivity(), "lỖI", Toast.LENGTH_SHORT).show();
             }
         });
-    }
+        service.getlistsanphamnam().enqueue(new Callback<ArrayList<SanPham>>() {
+            @Override
+            public void onResponse(Call<ArrayList<SanPham>> call, Response<ArrayList<SanPham>> response) {
+                list=response.body();
+                sanPhamAdapter=new SanPhamAdapter(getActivity(),list);
+                binding.rcvTTnam.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
+                binding.rcvTTnam.setAdapter(sanPhamAdapter);
+            }
 
+            @Override
+            public void onFailure(Call<ArrayList<SanPham>> call, Throwable t) {
+                Toast.makeText(getActivity(), "lỖI", Toast.LENGTH_SHORT).show();
+            }
+        });
+        service.getlistphukien().enqueue(new Callback<ArrayList<SanPham>>() {
+            @Override
+            public void onResponse(Call<ArrayList<SanPham>> call, Response<ArrayList<SanPham>> response) {
+                list=response.body();
+                sanPhamAdapter=new SanPhamAdapter(getActivity(),list);
+                binding.rcvPK.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
+                binding.rcvPK.setAdapter(sanPhamAdapter);
+            }
+            @Override
+            public void onFailure(Call<ArrayList<SanPham>> call, Throwable t) {
+                Toast.makeText(getActivity(), "lỖI", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
