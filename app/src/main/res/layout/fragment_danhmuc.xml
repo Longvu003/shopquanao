@@ -28,19 +28,12 @@
                 android:textSize="15sp"
                 android:textStyle="bold"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Xem Thêm"
-                android:gravity="end"
-                android:layout_marginRight="7dp"
-                android:textSize="12sp"
-                android:textColor="#0E9A3D"/>
+
 
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvTTnu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"/>
@@ -62,19 +55,12 @@
                 android:textSize="15sp"
                 android:textStyle="bold"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Xem Thêm"
-                android:gravity="end"
-                android:layout_marginRight="7dp"
-                android:textSize="12sp"
-                android:textColor="#0E9A3D"/>
+
 
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvTTnam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"/>
@@ -96,20 +82,13 @@
                 android:textSize="15sp"
                 android:textStyle="bold"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Xem Thêm"
-                android:gravity="end"
-                android:layout_marginRight="7dp"
-                android:textSize="12sp"
-                android:textColor="#0E9A3D"/>
+
 
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
+            android:id="@+id/rcvPK"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"/>
 
