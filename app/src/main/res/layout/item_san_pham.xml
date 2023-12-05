@@ -26,17 +26,16 @@
                 android:padding="10sp">
 
                 <ImageView
-                    android:id="@+id/image"
+                    android:id="@+id/anhsp"
                     android:layout_width="150dp"
                     android:layout_height="120dp"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/ao" />
+                    android:scaleType="fitCenter"/>
 
                 <TextView
                     android:id="@+id/txtmasp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/image"
+                    android:layout_below="@id/anhsp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
@@ -69,20 +68,8 @@
                     android:text=" 34000"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
-                <TextView
-                    android:layout_below="@+id/txtgiasp"
-                    android:id="@+id/txthinhanhsp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="null"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
                 <LinearLayout
-                    android:layout_below="@+id/txthinhanhsp"
+                    android:layout_below="@+id/txtgiasp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
