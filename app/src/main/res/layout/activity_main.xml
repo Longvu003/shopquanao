@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
-            android:layout_marginLeft="300dp"
+            android:layout_marginLeft="330dp"
             android:id="@+id/imgsearch"
             android:layout_marginTop="20sp"
             android:src="@drawable/ic_search"
