@@ -32,7 +32,10 @@
                 tools:src="@drawable/profile" />
 
             <TextView
-                android:padding="10dp"
+                android:textSize="20dp"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 android:id="@+id/anh"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -42,15 +45,15 @@
                 android:id="@+id/tensanpham_thongtin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
                 android:text="Áo nè "
                 android:textColor="#000000"
                 android:textSize="24sp"
-                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/anh"
                 app:layout_constraintTop_toBottomOf="@id/anh" />
 
             <TextView
-                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="@id/anh"
+                android:textSize="20dp"
                 android:id="@+id/txtgiasp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -61,27 +64,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
+                android:textStyle="bold"
+                android:textColor="#FA0000"
                 android:text="100000"
+                android:textSize="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtgiasp" />
             <TextView
-                android:id="@+id/txtthongtinsanpham"
+                android:id="@+id/thongtinsanpham"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
                 android:layout_marginStart="16dp"
+                app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/giasp_thongtin"
-                tools:text="$1.23" />
-            <TextView
-                android:id="@+id/thongtinsanpham"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtthongtinsanpham"
-                tools:text="ádasdasd" />
+                tools:text="ádasdasd"/>
 
 
 
