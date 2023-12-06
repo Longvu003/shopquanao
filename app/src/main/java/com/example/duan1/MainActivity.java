@@ -2,6 +2,7 @@ package com.example.duan1;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 
 import com.example.duan1.Adapter.SanPhamAdapter;
 import com.example.duan1.Model.SanPham;
+import com.example.duan1.Model.SearchActivity;
 import com.example.duan1.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -33,15 +35,16 @@ public class MainActivity extends AppCompatActivity {
 
     private int selectab = 1;
     ActivityMainBinding binding;
-//    RecyclerView recyclerView;
+    //    RecyclerView recyclerView;
 //    Context context = this;
-ImageView image_cart;
+    ImageView image_cart;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        image_cart=findViewById(R.id.image_cart);
+        image_cart = findViewById(R.id.image_cart);
         image_cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +52,20 @@ ImageView image_cart;
             }
         });
 
+        binding.edtSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+                intent.putExtra("key", query);
+                startActivity(intent);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
 
         getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_container, new TrangchuFragment()).commit();
         binding.bottomnav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

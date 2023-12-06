@@ -12,16 +12,13 @@
         android:id="@+id/toolbar"
         android:orientation="horizontal"
         android:layout_height="wrap_content">
-        <EditText
+        <androidx.appcompat.widget.SearchView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="8dp"
-            android:background="@drawable/custom_searchbar"
-            android:drawableLeft="@drawable/ic_search"
-            android:drawablePadding="5dp"
-            android:hint="Tìm Kiếm"
-            android:padding="13dp" />
+            app:queryHint="Tìm kiếm"
+            android:layout_marginStart="10dp"
+            android:id="@+id/edtSearch"
+            android:layout_height="wrap_content"/>
         <ImageView
             android:id="@+id/image_cart"
             android:src="@drawable/ic_giohang"
@@ -37,8 +34,6 @@
         android:layout_below="@+id/toolbar"
         android:layout_above="@+id/bottomnav"/>
 
-
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         app:menu="@menu/bottom_nav_menu"
@@ -46,6 +41,4 @@
         app:labelVisibilityMode="selected"
         android:layout_alignParentBottom="true"
         android:layout_height="wrap_content"/>
-
-
 </RelativeLayout>
