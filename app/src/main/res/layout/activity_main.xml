@@ -12,31 +12,38 @@
         android:id="@+id/toolbar"
         android:orientation="horizontal"
         android:layout_height="wrap_content">
-        <EditText
-            android:id="@+id/nuttimkiem"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="8dp"
-            android:drawableLeft="@drawable/ic_search"
-            android:drawablePadding="5dp"
-            android:hint="Tìm Kiếm"
-            android:padding="13dp" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarhome"
+        app:title="Home"
+        app:titleTextColor="@color/white"
+        android:background="#DD024709"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+    <LinearLayout
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize">
         <ImageView
-            android:id="@+id/image_cart"
-            android:src="@drawable/ic_giohang"
+            android:id="@+id/imgsearch"
+            android:layout_marginRight="300sp"
+            android:src="@drawable/ic_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ImageView
             android:layout_width="40dp"
-            android:layout_marginLeft="15sp"
-            android:paddingRight="10dp"
-            android:layout_height="match_parent"/>
+            android:layout_height="39dp"
+            android:layout_marginTop="15sp"
+            android:src="@drawable/ic_giohang"/>
 
     </LinearLayout>
+    </LinearLayout>
+
     <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/Fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/Fragment_container"
-        android:layout_below="@+id/toolbar"
-        android:layout_above="@+id/bottomnav"/>
+        android:layout_above="@+id/bottomnav" />
 
 
 
