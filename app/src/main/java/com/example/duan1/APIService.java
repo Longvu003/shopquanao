@@ -1,5 +1,6 @@
 package com.example.duan1;
 
+import com.example.duan1.Model.NguoiDung;
 import com.example.duan1.Model.SanPham;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -26,5 +27,8 @@ public interface APIService {
 
     @GET("timkiem.php")
     Call<ArrayList<SanPham>> getListSanPhamTimKiem(@Query("keyword") String text);
+
+    @GET("nguoidung.php")
+    Call<ArrayList<NguoiDung>> getlishNguoiDung();
 
 }
