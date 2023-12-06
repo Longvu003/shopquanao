@@ -35,17 +35,27 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
 //    RecyclerView recyclerView;
 //    Context context = this;
-ImageView image_cart;
+    ImageView image_cart, imgsearch;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         image_cart=findViewById(R.id.image_cart);
+        imgsearch = findViewById(R.id.imgsearch);
         image_cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, GiohangActivity.class));
+            }
+        });
+
+        imgsearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+                startActivity(intent);
             }
         });
 
