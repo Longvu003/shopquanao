@@ -9,6 +9,7 @@
     android:background="#FEFEFE">
 
     <LinearLayout
+        android:background="#0E9A3D"
         android:id="@+id/bar"
         android:orientation="horizontal"
         android:layout_width="match_parent"
