@@ -18,8 +18,10 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.duan1.Adapter.SanPhamAdapter;
+import com.example.duan1.Model.Cart;
 import com.example.duan1.Model.SanPham;
 import com.example.duan1.Model.SearchActivity;
+import com.example.duan1.Model.TinyCart;
 import com.example.duan1.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 

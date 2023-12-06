@@ -52,7 +52,6 @@ public class TrangchuFragment extends Fragment {
                 sanPhamAdapter = new SanPhamAdapter(getActivity(), list);
                 binding.recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
                 binding.recyclerView.setAdapter(sanPhamAdapter);
-                Toast.makeText(getActivity(), "", Toast.LENGTH_SHORT).show();
             }
 
             @Override

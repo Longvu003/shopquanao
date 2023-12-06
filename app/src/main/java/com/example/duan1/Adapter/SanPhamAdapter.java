@@ -17,7 +17,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.duan1.GiohangActivity;
+import com.example.duan1.Model.Cart;
 import com.example.duan1.Model.SanPham;
+import com.example.duan1.Model.TinyCart;
 import com.example.duan1.R;
 import com.example.duan1.ThongTinSanPhamActivity;
 
@@ -26,11 +28,13 @@ import java.util.ArrayList;
 public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.viewholder> {
     Context context;
     ArrayList<SanPham> list;
+    private Cart cart;
 
 
     public SanPhamAdapter(Context context, ArrayList<SanPham> list) {
         this.context = context;
         this.list = list;
+        cart = TinyCart.getInstance();
     }
 
     @NonNull
@@ -50,12 +54,12 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.viewhold
     private TextView txtmasp;
     private TextView txttensp;
     private TextView txtgiasp;
-
     private OnItemClickListener mListener;
 
 
     public class viewholder extends RecyclerView.ViewHolder {
         ImageView imganhsp;
+
         public viewholder(@NonNull View itemView) {
             super(itemView);
             txtmasp = itemView.findViewById(R.id.txtmasp);
@@ -88,11 +92,10 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.viewhold
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, ThongTinSanPhamActivity.class);
-                intent.putExtra("sanpham",list.get(position));
+                intent.putExtra("sanpham", list.get(position));
                 context.startActivity(intent);
             }
         });
-
 
 
     }
