@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
 //    RecyclerView recyclerView;
 //    Context context = this;
-ImageView image_cart;
+    ImageView image_cart, imgsearch;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,8 +49,6 @@ ImageView image_cart;
                 startActivity(new Intent(MainActivity.this, GiohangActivity.class));
             }
         });
-
-
 
 
         getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_container, new TrangchuFragment()).commit();
