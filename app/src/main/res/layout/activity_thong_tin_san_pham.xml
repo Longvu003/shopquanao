@@ -94,7 +94,7 @@
         android:layout_height="60dp"
         android:layout_margin="16dp"
         android:backgroundTint="#FF006400"
-        android:text="Add to cart"
+        android:text="MUA"
         android:textColor="#FFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

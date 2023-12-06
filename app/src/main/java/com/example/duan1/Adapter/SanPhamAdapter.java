@@ -78,7 +78,7 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.viewhold
         SanPham sanpham = list.get(position);
         txtmasp.setText(String.valueOf(sanpham.getMasp()));
         txttensp.setText(sanpham.getTensp());
-        txtgiasp.setText(String.valueOf(sanpham.getGiasp()));
+        txtgiasp.setText(sanpham.getGiasp() + " VND");
         Glide.with(context)
                 .load(sanpham.getHinhanhsp())
                 .apply(RequestOptions.centerCropTransform())

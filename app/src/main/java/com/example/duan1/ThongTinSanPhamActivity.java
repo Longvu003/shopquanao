@@ -33,7 +33,7 @@ public class ThongTinSanPhamActivity extends AppCompatActivity {
             sanPham = (SanPham) getIntent().getSerializableExtra("sanpham");
        }if (sanPham!=null){
         tensanpham.setText(sanPham.getTensp());
-        giasanpham.setText(sanPham.getGiasp());
+        giasanpham.setText(sanPham.getGiasp() + " VND");
             Glide.with(this).load(sanPham.getHinhanhsp()).
                     apply(RequestOptions.centerCropTransform()).into(photo);
         thongtinsanpham.setText(sanPham.getThongtinsp());
