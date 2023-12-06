@@ -40,7 +40,7 @@
                     android:src="@drawable/profile"/>
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/tvUser"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Long Bao"
@@ -53,14 +53,14 @@
                     app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/tvSDT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="baoquatroi@gmail.com"
+                    android:text="091919191"
                     android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="@+id/textView"
-                    app:layout_constraintStart_toStartOf="@+id/textView"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+                    app:layout_constraintEnd_toEndOf="@+id/tvUser"
+                    app:layout_constraintStart_toStartOf="@+id/tvUser"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUser" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -69,7 +69,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2">
+                    app:layout_constraintTop_toBottomOf="@+id/tvSDT">
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button"
