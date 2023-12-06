@@ -32,7 +32,7 @@
                 tools:src="@drawable/profile" />
 
             <TextView
-                android:id="@+id/productname"
+                android:id="@+id/tensanpham_thongtin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -45,22 +45,22 @@
 
 
             <TextView
-                android:id="@+id/thePriceOfProduct"
+                android:id="@+id/giasp_thongtin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/productname"
+                app:layout_constraintTop_toBottomOf="@+id/tensanpham_thongtin"
                 tools:text="$1.23" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:text="Thong Tin San Pham"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/thePriceOfProduct" />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="16dp"-->
+<!--                android:text="Thong Tin San Pham"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/giasp_thongtin" />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

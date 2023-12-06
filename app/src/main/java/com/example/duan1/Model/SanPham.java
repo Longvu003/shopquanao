@@ -1,14 +1,8 @@
 package com.example.duan1.Model;
 
-import android.annotation.SuppressLint;
-import android.os.Parcel;
-import android.os.Parcelable;
-
-import androidx.annotation.NonNull;
-
 import java.io.Serializable;
 
-@SuppressLint("ParcelCreator")
+
 public class SanPham implements Serializable {
     private  String masp;
     private  String tensp;
