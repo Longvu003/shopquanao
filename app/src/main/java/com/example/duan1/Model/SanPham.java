@@ -8,12 +8,14 @@ public class SanPham implements Serializable {
     private  String tensp;
     private  String giasp;
     private  String hinhanhsp;
+    private String thongtinsp;
 
-    public SanPham(String masp, String tensp, String giasp, String hinhanhsp) {
+    public SanPham(String masp, String tensp, String giasp, String hinhanhsp, String thongtinsp) {
         this.masp = masp;
         this.tensp = tensp;
         this.giasp = giasp;
         this.hinhanhsp = hinhanhsp;
+        this.thongtinsp = thongtinsp;
     }
 
     public String getMasp() {
@@ -48,7 +50,11 @@ public class SanPham implements Serializable {
         this.hinhanhsp = hinhanhsp;
     }
 
+    public String getThongtinsp() {
+        return thongtinsp;
+    }
 
-
-
+    public void setThongtinsp(String thongtinsp) {
+        this.thongtinsp = thongtinsp;
+    }
 }

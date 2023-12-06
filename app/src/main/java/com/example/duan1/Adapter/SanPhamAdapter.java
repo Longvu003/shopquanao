@@ -27,6 +27,7 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.viewhold
     Context context;
     ArrayList<SanPham> list;
 
+
     public SanPhamAdapter(Context context, ArrayList<SanPham> list) {
         this.context = context;
         this.list = list;
@@ -91,5 +92,8 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.viewhold
                 context.startActivity(intent);
             }
         });
+
+
+
     }
 }

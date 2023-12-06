@@ -73,19 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <Button
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/btnmua"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="14dp"
-                        android:backgroundTint="#64DD17"
-                        android:text="Mua"/>
-                  <ImageView
-                      android:id="@+id/themgiohang"
-                      android:layout_width="50dp"
-                      android:layout_height="40dp"
-                      android:src="@drawable/ic_giohang"/>
+
                 </LinearLayout>
             </RelativeLayout>
 

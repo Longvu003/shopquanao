@@ -31,7 +31,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class TrangchuFragment extends Fragment {
     ArrayList<SanPham> list;
     FragmentTrangchuBinding binding;
-    private ArrayList<SanPham> gioHang = new ArrayList<>();
+
     SanPhamAdapter sanPhamAdapter=new SanPhamAdapter(getActivity(),list);
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -79,8 +79,6 @@ public class TrangchuFragment extends Fragment {
         View view=binding.getRoot();
         return view;
     }
-
-
     // đẩy thông tin đi
 private void thongtinsanpham(SanPham sanPham){
         Intent intent=new Intent(getActivity(), ThongTinSanPhamActivity.class);

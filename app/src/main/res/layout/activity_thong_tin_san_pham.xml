@@ -32,35 +32,58 @@
                 tools:src="@drawable/profile" />
 
             <TextView
+                android:padding="10dp"
+                android:id="@+id/anh"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Tên Sản Phẩm:"
+                app:layout_constraintTop_toBottomOf="@id/photo"/>
+            <TextView
                 android:id="@+id/tensanpham_thongtin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
-                android:text="Ten San Pham"
+                android:text="Áo nè "
                 android:textColor="#000000"
                 android:textSize="24sp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/photo" />
-
+                app:layout_constraintTop_toBottomOf="@id/anh" />
 
             <TextView
+                android:padding="10dp"
+                android:id="@+id/txtgiasp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Giá sản phẩm:"
+                app:layout_constraintTop_toBottomOf="@id/tensanpham_thongtin"/>
+            <TextView
                 android:id="@+id/giasp_thongtin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="100000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtgiasp" />
+            <TextView
+                android:id="@+id/txtthongtinsanpham"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tensanpham_thongtin"
+                app:layout_constraintTop_toBottomOf="@+id/giasp_thongtin"
                 tools:text="$1.23" />
+            <TextView
+                android:id="@+id/thongtinsanpham"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtthongtinsanpham"
+                tools:text="ádasdasd" />
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="16dp"-->
-<!--                android:text="Thong Tin San Pham"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/giasp_thongtin" />-->
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
