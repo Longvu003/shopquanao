@@ -19,7 +19,7 @@ public class ThongTinSanPhamActivity extends AppCompatActivity {
     TextView tensanpham;
     TextView giasanpham;
     ImageView  photo;
-
+    TextView thongtinsanpham;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +27,7 @@ public class ThongTinSanPhamActivity extends AppCompatActivity {
         tensanpham=findViewById(R.id.tensanpham_thongtin);
         giasanpham=findViewById(R.id.giasp_thongtin);
         photo=findViewById(R.id.photo);
+        thongtinsanpham=findViewById(R.id.thongtinsanpham);
         Intent intent = getIntent();
        if(intent !=null&&intent.hasExtra("sanpham")){
             sanPham = (SanPham) getIntent().getSerializableExtra("sanpham");
@@ -35,7 +36,20 @@ public class ThongTinSanPhamActivity extends AppCompatActivity {
         giasanpham.setText(sanPham.getGiasp());
             Glide.with(this).load(sanPham.getHinhanhsp()).
                     apply(RequestOptions.centerCropTransform()).into(photo);
+        thongtinsanpham.setText(sanPham.getThongtinsp());
+
         }
     }
+//    public  void themvaogiohang(SanPham sanPham){
+//        gioHang.add(sanPham);
+//
+//    }
+//    public  void giohang(){
+//        Intent intent=new Intent(getActivity(), GiohangActivity.class);
+//        intent.putParcelableArrayListExtra("giohang",gioHang);
+//        startActivity(intent);
+//
+//    }
+
 
 }

@@ -48,8 +48,6 @@ ImageView image_cart;
                 startActivity(new Intent(MainActivity.this, GiohangActivity.class));
             }
         });
-
-
         getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_container, new TrangchuFragment()).commit();
         binding.bottomnav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             Fragment fragment;
