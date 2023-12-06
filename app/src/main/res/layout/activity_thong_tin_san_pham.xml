@@ -32,7 +32,9 @@
                 tools:src="@drawable/profile" />
 
             <TextView
-                android:padding="10dp"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 android:id="@+id/anh"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -50,7 +52,7 @@
                 app:layout_constraintTop_toBottomOf="@id/anh" />
 
             <TextView
-                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="@id/tensanpham_thongtin"
                 android:id="@+id/txtgiasp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -68,27 +70,24 @@
                 android:id="@+id/txtthongtinsanpham"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@id/giasp_thongtin"
                 app:layout_constraintTop_toBottomOf="@+id/giasp_thongtin"
-                tools:text="$1.23" />
+                tools:text="Thông tin sản phẩm" />
             <TextView
+                android:text="ccccccccccccccccccccccccccccccc"
                 android:id="@+id/thongtinsanpham"
                 android:layout_width="wrap_content"
+                android:layout_marginEnd="10dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/txtthongtinsanpham"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtthongtinsanpham"
-                tools:text="ádasdasd" />
-
-
-
+                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
-
     <Button
         android:id="@+id/addToCartButton"
         android:layout_width="match_parent"
