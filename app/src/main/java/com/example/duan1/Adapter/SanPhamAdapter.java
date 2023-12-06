@@ -82,7 +82,7 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.viewhold
                 .load(sanpham.getHinhanhsp())
                 .apply(RequestOptions.centerCropTransform())
                 .into(holder.imganhsp);
-
+// sự kiện click truyền thông tin đi
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

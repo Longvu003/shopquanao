@@ -32,14 +32,12 @@ public class TrangchuFragment extends Fragment {
     ArrayList<SanPham> list;
     FragmentTrangchuBinding binding;
     private ArrayList<SanPham> gioHang = new ArrayList<>();
-    SanPhamAdapter sanPhamAdapter;
-    ImageView themvaogiohang;
-    private  String toltal="0";
-
+    SanPhamAdapter sanPhamAdapter=new SanPhamAdapter(getActivity(),list);
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         list = new ArrayList<>();
+        sanPhamAdapter=new SanPhamAdapter(getActivity(),list);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(APIService.base_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -52,12 +50,6 @@ public class TrangchuFragment extends Fragment {
             public void onResponse(Call<ArrayList<SanPham>> call, Response<ArrayList<SanPham>> response) {
                 list = response.body();
                 sanPhamAdapter = new SanPhamAdapter(getActivity(), list);
-                sanPhamAdapter.setOnItemClickListener(new SanPhamAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(SanPham sanPham) {
-                        item_clicked(sanPham.getMasp(),sanPham.getTensp(),sanPham.getGiasp(),sanPham.getHinhanhsp());
-                    }
-                });
                 binding.recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
                 binding.recyclerView.setAdapter(sanPhamAdapter);
                 Toast.makeText(getActivity(), "", Toast.LENGTH_SHORT).show();
@@ -75,33 +67,25 @@ public class TrangchuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentTrangchuBinding.inflate(inflater, container, false);
+        // lắng nghe sự kiệ click vào item và setlayout
+  sanPhamAdapter.setOnItemClickListener(new SanPhamAdapter.OnItemClickListener() {
+      @Override
+      public void onItemClick(SanPham sanPham) {
 
+      }
+  });
+  binding.recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
+  binding.recyclerView.setAdapter(sanPhamAdapter);
         View view=binding.getRoot();
         return view;
     }
 
-    public  void item_clicked(String masp, String tensp,String giasp, String hinhanhsp){
-        boolean clicked=false;
-        for (SanPham sanPham:gioHang){
-        if(sanPham.getMasp().equals(masp)){
-            clicked=false;
-            sanPham.setMasp(sanPham.getMasp()+1);
-            break;
-        }
-        if (!clicked){
-            SanPham sanPham1 = new SanPham(masp, tensp, giasp, hinhanhsp);
-            gioHang.add(sanPham1);
-        }
 
-        }
-        toltal+=giasp;
-        Log.d("ItemClick", "Item clicked: " + tensp);
-        Intent intent=new Intent(getContext(), GiohangActivity.class);
-        intent.putExtra("masp",masp);
-        intent.putExtra("tensp",tensp);
-        intent.putExtra("giasp",giasp);
-        intent.putExtra("hinhanhsp",hinhanhsp);
+    // đẩy thông tin đi
+private void thongtinsanpham(SanPham sanPham){
+        Intent intent=new Intent(getActivity(), ThongTinSanPhamActivity.class);
+        intent.putExtra("sanpham",list);
         startActivity(intent);
-    }
+}
 
 }
