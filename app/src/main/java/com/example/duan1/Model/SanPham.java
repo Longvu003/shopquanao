@@ -6,6 +6,7 @@ import java.io.Serializable;
 public class SanPham implements Serializable {
     private  String masp;
     private  String tensp;
+
     private  String giasp;
     private  String hinhanhsp;
     private String thongtinsp;
