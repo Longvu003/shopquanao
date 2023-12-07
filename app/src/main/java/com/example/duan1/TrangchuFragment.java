@@ -20,6 +20,7 @@ import com.example.duan1.Model.SanPham;
 import com.example.duan1.databinding.FragmentTrangchuBinding;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,12 +33,13 @@ public class TrangchuFragment extends Fragment {
     ArrayList<SanPham> list;
     FragmentTrangchuBinding binding;
 
-    SanPhamAdapter sanPhamAdapter=new SanPhamAdapter(getActivity(),list);
+    SanPhamAdapter sanPhamAdapter = new SanPhamAdapter(getActivity(), list);
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         list = new ArrayList<>();
-        sanPhamAdapter=new SanPhamAdapter(getActivity(),list);
+        sanPhamAdapter = new SanPhamAdapter(getActivity(), list);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(APIService.base_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -50,7 +52,7 @@ public class TrangchuFragment extends Fragment {
             public void onResponse(Call<ArrayList<SanPham>> call, Response<ArrayList<SanPham>> response) {
                 list = response.body();
                 sanPhamAdapter = new SanPhamAdapter(getActivity(), list);
-                binding.recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
+                binding.recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
                 binding.recyclerView.setAdapter(sanPhamAdapter);
             }
 
@@ -62,27 +64,35 @@ public class TrangchuFragment extends Fragment {
 
 
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentTrangchuBinding.inflate(inflater, container, false);
         // lắng nghe sự kiệ click vào item và setlayout
-  sanPhamAdapter.setOnItemClickListener(new SanPhamAdapter.OnItemClickListener() {
-      @Override
-      public void onItemClick(SanPham sanPham) {
+        sanPhamAdapter.setOnItemClickListener(new SanPhamAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(SanPham sanPham) {
 
-      }
-  });
-  binding.recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
-  binding.recyclerView.setAdapter(sanPhamAdapter);
-        View view=binding.getRoot();
+            }
+        });
+        binding.recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        binding.recyclerView.setAdapter(sanPhamAdapter);
+        int src[] = {R.drawable.slider1, R.drawable.slider2, R.drawable.slider3};
+        List<Integer> intList = new ArrayList<>()
+        binding.carousel.addData();
+
+        View view = binding.getRoot();
+
+
         return view;
     }
+
     // đẩy thông tin đi
-private void thongtinsanpham(SanPham sanPham){
-        Intent intent=new Intent(getActivity(), ThongTinSanPhamActivity.class);
-        intent.putExtra("sanpham",list);
+    private void thongtinsanpham(SanPham sanPham) {
+        Intent intent = new Intent(getActivity(), ThongTinSanPhamActivity.class);
+        intent.putExtra("sanpham", list);
         startActivity(intent);
-}
+    }
 
 }
