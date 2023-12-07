@@ -1,11 +1,11 @@
 package com.example.duan1.Model;
 
 public class TinyCart {
-    public static final Cart cart = new Cart();
+    private static Cart cart = new Cart();
 
     public static Cart getInstance() {
         if (cart == null) {
-            return new Cart();
+            cart = new Cart();
         }
         return cart;
     }
