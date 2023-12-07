@@ -91,7 +91,7 @@
                         android:paddingTop="15dp"
                         android:paddingRight="10dp"
                         android:paddingBottom="15dp"
-                        android:text="Information"
+                        android:text="Thông Tin Người Dùng"
                         android:textSize="16sp" />
 
                     <View
@@ -105,7 +105,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:ems="10"
-                        android:hint="Full Name"
+                        android:hint="Họ Tên"
                         android:inputType="text"
                         android:padding="15dp" />
 
@@ -115,7 +115,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:ems="10"
-                        android:hint="Email Address"
+                        android:hint="Địa Chỉ Email"
                         android:inputType="text"
                         android:padding="15dp" />
 
@@ -125,7 +125,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:ems="10"
-                        android:hint="Phone Number"
+                        android:hint="Số Điện Thoại"
                         android:inputType="number"
                         android:padding="15dp" />
 
@@ -135,7 +135,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:ems="10"
-                        android:hint="Address"
+                        android:hint="Địa Chỉ"
                         android:inputType="text"
                         android:padding="15dp" />
 
@@ -145,19 +145,10 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:ems="10"
-                        android:hint="Date Shipping"
+                        android:hint="Ngày Mua Hàng"
                         android:inputType="text"
                         android:padding="15dp" />
 
-                    <EditText
-                        android:id="@+id/commentBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:ems="10"
-                        android:hint="Additional Comments"
-                        android:inputType="textPersonName"
-                        android:padding="15dp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -182,7 +173,7 @@
                         android:paddingTop="15dp"
                         android:paddingRight="10dp"
                         android:paddingBottom="15dp"
-                        android:text="Product Order List"
+                        android:text="Danh Sách Mua Hàng"
                         android:textSize="16sp" />
 
                     <View
@@ -202,7 +193,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Process Checkout" />
+                android:text="Xác Nhận" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>

@@ -6,8 +6,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.duan1.Adapter.CartAdapter;
@@ -15,6 +18,8 @@ import com.example.duan1.Model.Cart;
 import com.example.duan1.Model.TinyCart;
 
 public class CheckOutActivity extends AppCompatActivity {
+
+    Button checkoutBtn = findViewById(R.id.checkoutBtn);
     private Cart cart;
     static TextView txtTotal;
     @Override
@@ -33,6 +38,14 @@ public class CheckOutActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Thanh Toán");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Button checkoutBtn = findViewById(R.id.checkoutBtn);
+        checkoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    startActivity(new Intent());
+            }
+        });
     }
 
     @Override
@@ -49,4 +62,5 @@ public class CheckOutActivity extends AppCompatActivity {
             txtTotal.setText(TinyCart.getInstance().getTonggia()+" VND");
         }
     }
+
 }
