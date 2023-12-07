@@ -19,7 +19,10 @@ import com.example.duan1.Adapter.SanPhamAdapter;
 import com.example.duan1.Model.SanPham;
 import com.example.duan1.databinding.FragmentTrangchuBinding;
 
+import org.imaginativeworld.whynotimagecarousel.model.CarouselItem;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import retrofit2.Call;
@@ -78,9 +81,13 @@ public class TrangchuFragment extends Fragment {
         });
         binding.recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         binding.recyclerView.setAdapter(sanPhamAdapter);
-        int src[] = {R.drawable.slider1, R.drawable.slider2, R.drawable.slider3};
-        List<Integer> intList = new ArrayList<>()
-        binding.carousel.addData();
+        List<Integer> intList = new ArrayList<>();
+        intList.add(R.drawable.slider1);
+        intList.add(R.drawable.slider2);
+        intList.add(R.drawable.slider3);
+        binding.carousel.addData(new CarouselItem(R.drawable.slider1));
+        binding.carousel.addData(new CarouselItem(R.drawable.slider2));
+        binding.carousel.addData(new CarouselItem(R.drawable.slider3));
 
         View view = binding.getRoot();
 
