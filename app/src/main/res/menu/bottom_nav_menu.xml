@@ -8,9 +8,9 @@
         android:id="@+id/nvdanhmuc"
         android:icon="@drawable/ic_danhmuc"/>
 
-    <item android:title="Yêu thích"
+    <item android:title="Lịch Sử"
         android:id="@+id/nvyeuthich"
-        android:icon="@drawable/ic_yeuthich"/>
+        android:icon="@drawable/ic_history"/>
 
     <item android:title="Thành viên"
         android:id="@+id/nvthanhvien"
