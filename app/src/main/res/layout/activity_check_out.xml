@@ -39,7 +39,7 @@
                         android:paddingTop="15dp"
                         android:paddingRight="10dp"
                         android:paddingBottom="15dp"
-                        android:text="Cost Details"
+                        android:text="Chi Tiết"
                         android:textSize="16sp" />
 
                     <LinearLayout
@@ -91,7 +91,7 @@
                         android:paddingTop="15dp"
                         android:paddingRight="10dp"
                         android:paddingBottom="15dp"
-                        android:text="Information"
+                        android:text="Thông Tin Khách Hàng"
                         android:textSize="16sp" />
 
                     <View
@@ -105,7 +105,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:ems="10"
-                        android:hint="Full Name"
+                        android:hint="Họ Tên"
                         android:inputType="text"
                         android:padding="15dp" />
 
@@ -115,7 +115,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:ems="10"
-                        android:hint="Email Address"
+                        android:hint="Họ Tên Email"
                         android:inputType="text"
                         android:padding="15dp" />
 
@@ -125,7 +125,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:ems="10"
-                        android:hint="Phone Number"
+                        android:hint="Số Điện Thoại"
                         android:inputType="number"
                         android:padding="15dp" />
 
@@ -135,29 +135,10 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:ems="10"
-                        android:hint="Address"
+                        android:hint="Địa Chỉ"
                         android:inputType="text"
                         android:padding="15dp" />
 
-                    <EditText
-                        android:id="@+id/dateBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:ems="10"
-                        android:hint="Date Shipping"
-                        android:inputType="text"
-                        android:padding="15dp" />
-
-                    <EditText
-                        android:id="@+id/commentBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:ems="10"
-                        android:hint="Additional Comments"
-                        android:inputType="textPersonName"
-                        android:padding="15dp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -200,9 +181,14 @@
             <Button
                 android:id="@+id/checkoutBtn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Process Checkout" />
+                android:layout_height="60dp"
+                android:layout_margin="16dp"
+                android:backgroundTint="#FF006400"
+                android:text="Xác Nhận"
+                android:textColor="#FFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>
