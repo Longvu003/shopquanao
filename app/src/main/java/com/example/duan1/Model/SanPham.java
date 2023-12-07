@@ -33,8 +33,8 @@ public class SanPham implements Serializable {
     }
 
     public void giamSoLuong() {
-        if (this.soLuong <= 0) {
-            this.soLuong = 0;
+        if (this.soLuong <= 1) {
+            this.soLuong = 1;
         } else {
             this.soLuong--;
             setSoLuong(soLuong);
