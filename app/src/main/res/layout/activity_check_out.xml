@@ -115,7 +115,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:ems="10"
-                        android:hint="Họ Tên Email"
+                        android:hint="Email"
                         android:inputType="text"
                         android:padding="15dp" />
 
