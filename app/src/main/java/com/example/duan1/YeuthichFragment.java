@@ -17,4 +17,5 @@ public class YeuthichFragment extends Fragment {
 
         return inflater.inflate(R.layout.fragment_yeuthich, container, false);
     }
+
 }

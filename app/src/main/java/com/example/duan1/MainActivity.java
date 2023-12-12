@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.example.duan1.Adapter.SanPhamAdapter;
 import com.example.duan1.Model.Cart;
+import com.example.duan1.Model.DataLocalManager;
 import com.example.duan1.Model.SanPham;
 import com.example.duan1.Model.SearchActivity;
 import com.example.duan1.Model.TinyCart;
@@ -53,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, GiohangActivity.class));
             }
         });
+
+        if (!DataLocalManager.getFirstInstalled()) {
+            Toast.makeText(this, "Lịch Sử Đơn Hàng",Toast.LENGTH_LONG).show();
+            DataLocalManager.setFirstInstalled(true);
+        }
 
         binding.edtSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
