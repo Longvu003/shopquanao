@@ -1,15 +1,15 @@
 package com.example.duan1;
 
+import com.example.duan1.Model.APIcheck;
 import com.example.duan1.Model.SanPham;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
 
 import retrofit2.Call;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.Part;
-import retrofit2.http.Path;
+import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface APIService {
@@ -26,5 +26,9 @@ public interface APIService {
 
     @GET("timkiem.php")
     Call<ArrayList<SanPham>> getListSanPhamTimKiem(@Query("keyword") String text);
-
+    @FormUrlEncoded
+    @POST("register.php")
+    Call<ArrayList<APIcheck>> dangky(@Field("tennguoidung")String username, @Field("matkhau") String password);
+    @GET("login.php")
+    Call<APIcheck> getlogin(@Query("sdt") String sdt, @Query("password") String password);
 }

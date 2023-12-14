@@ -69,16 +69,6 @@ public class ThongTinSanPhamActivity extends AppCompatActivity {
             btnAdd.setText("Sản phẩm đã có trong giỏ hàng");
         }
     }
-//    public  void themvaogiohang(SanPham sanPham){
-//        gioHang.add(sanPham);
-//
-//    }
-//    public  void giohang(){
-//        Intent intent=new Intent(getActivity(), GiohangActivity.class);
-//        intent.putParcelableArrayListExtra("giohang",gioHang);
-//        startActivity(intent);
-//
-//    }
 
 
 }

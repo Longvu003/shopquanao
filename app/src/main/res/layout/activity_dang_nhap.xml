@@ -40,7 +40,7 @@
                 android:background="@drawable/custom_edittext"
                 android:drawableLeft="@drawable/ic_canhan"
                 android:drawablePadding="8dp"
-                android:hint="Tài Khoản"
+                android:hint="Số điện thoại"
                 android:padding="8dp"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background"
@@ -85,6 +85,6 @@
         android:text="Chưa Có Tài Khoản? Đăng Kí Ngay"
         android:textSize="14sp"
         android:textAlignment="center"
-        android:id="@+id/forgotText"
+        android:id="@+id/Chuacotaikhoan"
         android:textColor="#006400"/>
 </LinearLayout>
