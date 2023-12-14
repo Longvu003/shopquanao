@@ -69,4 +69,9 @@ public class Cart {
         Log.e("Hello", "getSoluong: "+soluong);
         return soluong;
     }
+
+    public void clearList() {
+        listsanpham.clear();
+    }
+
 }
