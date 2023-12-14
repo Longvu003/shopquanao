@@ -50,7 +50,7 @@ public class DangkyActivity extends AppCompatActivity {
            }else if (!password.matches("^.{8}$")|| !password.equals(Repassword)){
                Toast.makeText(DangkyActivity.this, "Mật khẩu không đúng định dạng gồm 8 ký tự", Toast.LENGTH_SHORT).show();
            }else {
-               Toast.makeText(DangkyActivity.this, "Đăng ký thành công nha", Toast.LENGTH_SHORT).show();
+               Toast.makeText(DangkyActivity.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
                Dangky(username,password);
                Intent intent=new Intent(DangkyActivity.this, MainActivity.class);
                startActivity(intent);
